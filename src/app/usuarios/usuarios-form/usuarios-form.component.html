@@ -1,0 +1,95 @@
+<h1 class="mt-4">Usuário</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Cadastro</li>
+</ol>
+<div class="container">
+    <form #usuarioForm="ngForm" >
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert" *ngIf="success == true">
+                Cliente salvo/atualizado com sucesso!
+            </div>
+            <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+                {{erro}}
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="form-group">
+                    <label>ID:</label>
+                    <input type="text" [(ngModel)]="usuario.id" name="id" class="form-control" disabled="true"/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" [(ngModel)]="usuario.nome" name="nome" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" [(ngModel)]="usuario.email" name="email" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Data Nasc.:</label>
+                    <input type="text" [(ngModel)]="usuario.dataNascimento" name="dataNascimento" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>CEP:</label>
+                    <input type="text" [(ngModel)]="usuario.cep" name="cep" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label>Logradouro:</label>
+                    <input type="text" [(ngModel)]="usuario.logradouro" name="logradouro" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="form-group">
+                    <label>Numero:</label>
+                    <input type="text" [(ngModel)]="usuario.numero" name="numero" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Complemento:</label>
+                    <input type="text" [(ngModel)]="usuario.complemento" name="complemento" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Bairro:</label>
+                    <input type="text" [(ngModel)]="usuario.bairro" name="bairro" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Cidade:</label>
+                    <input type="text" [(ngModel)]="usuario.cidade" name="cidade" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group">
+                    <label>UF:</label>
+                    <input type="text" [(ngModel)]="usuario.uf" name="uf" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-success" (click)="clicar()">
+                <i class="fa fa-save"></i> Novo
+              </button>  
+            </div>
+        </div>
+    </form>
+</div>

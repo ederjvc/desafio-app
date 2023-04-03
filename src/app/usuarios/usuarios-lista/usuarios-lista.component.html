@@ -1,0 +1,29 @@
+<h1 class="mt-4">Usuarios</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Consulta</li>
+</ol>
+<div class="container">   
+    
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed table-hover">
+              <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Data Nascimento</th>
+                    <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let usuario of usuarios">              
+                      <td>{{ usuario.nome }}</td>
+                      <td>{{ usuario.email }}</td>
+                      <td>{{ usuario.dataNascimento }}</td>
+                      
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>   
+</div>
